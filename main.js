@@ -55,3 +55,15 @@ document.getElementById("btn2").addEventListener("click", function () { return a
 document.getElementById("btn3").addEventListener("click", function () { return addScore(3); });
 // Assign event to the button to load the next joke.
 document.getElementById("btn").addEventListener("click", showJoke);
+// Exercici 4
+var apiKey = 'fc95b888f94e987b473d2bec305412b9';
+var url = "https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=".concat(apiKey, "&units=metric");
+fetch(url)
+    .then(function (response) { return response.json(); })
+    .then(function (data) {
+    //console.log(data);
+    var weather = document.getElementById('weather');
+    if (weather !== null) {
+        weather.innerHTML = "".concat(data.name, " : T\u00AA \"").concat(data.main.temp, "\u00B0C\"<br> \n\t\tWeather : ").concat(data.weather[0].main, " \"").concat(data.weather[0].description, "\"<br>\n\t\tWind speed: \"").concat(data.wind.speed, "\"");
+    }
+})["catch"](function (error) { return console.error(error); });

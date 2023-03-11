@@ -94,7 +94,20 @@ interface Joke {
   // Assign event to the button to load the next joke.
   document.getElementById("btn")!.addEventListener("click", showJoke);
   
+// Exercici 4
 
+const apiKey = 'fc95b888f94e987b473d2bec305412b9';
+const url = `https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=${apiKey}&units=metric`;
 
- 
-
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+	//console.log(data);
+	const weather = document.getElementById('weather');
+	if (weather !== null) {
+		weather.innerHTML = `${data.name} : Tª "${data.main.temp}°C"<br> 
+		Weather : ${data.weather[0].main} "${data.weather[0].description}"<br>
+		Wind speed: "${data.wind.speed}"`;
+	}
+  })
+  .catch(error => console.error(error));
