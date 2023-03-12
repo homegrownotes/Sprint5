@@ -118,6 +118,8 @@ fetch(url)
 
 // Exercici 5
 
+// Exercici 6
+
 interface Joke {
 	id: string;
 	joke: string;
@@ -130,7 +132,6 @@ interface Joke {
 	const jokeElement = document.getElementById("joke")!;
 	// Generate a random number to choose between different joke APIS.
 	const rand = Math.random();
-
 	// Set the default values for the API call
 	let url = "https://icanhazdadjoke.com/";
 	let headers = {
@@ -202,12 +203,8 @@ fetch(url)
 	//console.log(data);
 	const weather = document.getElementById('weather');
 	if (weather !== null) {
-		weather.innerHTML = `${data.name} : Tª "${data.main.temp}°C"<br> 
-		Weather : ${data.weather[0].main} "${data.weather[0].description}"<br>
-		Wind speed: "${data.wind.speed}"`;
+		weather.innerHTML = `${data.name} : Tª ${data.main.temp}°C`;
 	}
   })
   .catch(error => console.error(error));
-
-  
 		

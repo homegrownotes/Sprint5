@@ -81,6 +81,6 @@ fetch(url)
     //console.log(data);
     var weather = document.getElementById('weather');
     if (weather !== null) {
-        weather.innerHTML = "".concat(data.name, " : T\u00AA \"").concat(data.main.temp, "\u00B0C\"<br> \n\t\tWeather : ").concat(data.weather[0].main, " \"").concat(data.weather[0].description, "\"<br>\n\t\tWind speed: \"").concat(data.wind.speed, "\"");
+        weather.innerHTML = "".concat(data.name, " : T\u00AA ").concat(data.main.temp, "\u00B0C");
     }
 })["catch"](function (error) { return console.error(error); });

@@ -11,35 +11,38 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-}
-
-section {
-	background: linear-gradient(to bottom, #f7f8f8, #c3cfe2);
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-	border: 0.5px solid #0080ff;
+	word-wrap: break-word;
+	background-image: url('svgs/Background/blob_1.svg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 180px 187px;
+	max-width: 100%;
 	padding: 0 80px;
-	border-radius: 20px 20px 20px 20px;
+	margin-top: -478px;
 }
 
 h1 {
 	font-size: 40px;
 	font-weight: 600;
+	margin-top: 235px;
 }
 
 h5 {
 	font-size: 25px;
 	font-weight: 400;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .button {
 	background: linear-gradient(to bottom, rgba(0, 198, 251, 0.6), rgba(0, 91, 234, 0.6));
-	padding: 23px 65px;
+	padding: 13px 25px;
 	border-radius: 10px 10px 10px 10px;
 	border: 2px solid #0080ff;
 	font-size: 23px;
 	letter-spacing: 4px;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+	margin-top: -41px;
+	margin-bottom: 143px;
 }
 
 .button1 {
@@ -78,17 +81,20 @@ h5 {
 .weather {
 	text-align: left;
 	font-size: 28px;
-	margin-bottom: 0;
+	margin-left: 100px;
 }
 
 p {
 	font-style: italic;
-	margin-bottom: 100px;
+	margin-bottom: -191px;
 	font-size: smaller;
+	margin-left: 274px;
 }
 
 h3 {
 	margin-bottom: -40px;
+	margin-left: 100px;
+	margin-left: 274px;
 }
 
 h4 {
@@ -106,4 +112,18 @@ h4 {
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 	display: none;
 	font-style: oblique;
+}
+
+.icon {
+	margin-left: 500px;
+}
+
+.top-svg {
+	margin-left: 1562px;
+	margin-bottom: -494px;
+}
+
+.bottom-svg {
+	margin-left: 562px;
+	margin-top: -392px;
 }
