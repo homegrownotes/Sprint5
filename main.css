@@ -43,7 +43,7 @@ h5 {
 }
 
 .button1 {
-	background: linear-gradient(to bottom, rgba(215, 236, 30, 0.6), #c3cfe2);
+	background: linear-gradient(to bottom, rgba(238, 245, 38, 0.6), #c3cfe2);
 	padding: 13px 25px;
 	border-radius: 10px 10px 10px 10px;
 	border: 2px solid #0080ff;
@@ -54,7 +54,7 @@ h5 {
 }
 
 .button2 {
-	background: linear-gradient(to bottom, rgba(251, 0, 17, 0.6), #c3cfe2);
+	background: linear-gradient(to bottom, rgba(67, 251, 0, 0.6), #c3cfe2);
 	padding: 13px 25px;
 	border-radius: 10px 10px 10px 10px;
 	border: 2px solid #0080ff;
@@ -65,7 +65,7 @@ h5 {
 }
 
 .button3 {
-	background: linear-gradient(to bottom, rgba(67, 251, 0, 0.6), #c3cfe2);
+	background: linear-gradient(to bottom, rgba(251, 0, 17, 0.6), #c3cfe2);
 	padding: 13px 25px;
 	border-radius: 10px 10px 10px 10px;
 	border: 2px solid #0080ff;
@@ -89,4 +89,21 @@ p {
 
 h3 {
 	margin-bottom: -40px;
+}
+
+h4 {
+
+	font-size: 20px;
+}
+
+.nextJokeText {
+	background: linear-gradient(to bottom, rgba(146, 0, 251, 0.6), #c3cfe2);
+	padding: 5px 17px;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #0080ff;
+	font-size: 18px;
+	letter-spacing: 2px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+	display: none;
+	font-style: oblique;
 }

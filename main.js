@@ -12,13 +12,27 @@
 
 var btn = document.getElementById('btn'); // => Get "DOM necessary elements"
 btn?.addEventListener('click', showJoke); // => Adding event to start "showJoke function".*/
+// Definig the array to store "jokes" with theirs scores and dates.
 var reportAcudits = []; // Defining the array.
 function showJoke() {
+    // Get the HTML element to display the joke.
     var jokeElement = document.getElementById("joke");
-    fetch("https://icanhazdadjoke.com/", {
-        headers: {
+    // Generate a random number to choose between different joke APIS.
+    var rand = Math.random();
+    // Set the default values for the API call
+    var url = "https://icanhazdadjoke.com/";
+    var headers = {
+        Accept: "application/json"
+    };
+    // Choose the Chuck Norris API only if the random number is greater than 0.5.
+    if (rand > 0.5) {
+        url = "https://api.chucknorris.io/jokes/random";
+        headers = {
             Accept: "application/json"
-        }
+        };
+    }
+    fetch(url, {
+        headers: headers
     })
         .then(function (response) { return response.json(); })
         .then(function (data) {
@@ -35,12 +49,16 @@ function showJoke() {
         if (button3 !== null) {
             button3.style.display = "inline";
         }
+        var nextJokeText = document.getElementById("nextJokeText");
+        if (nextJokeText !== null) {
+            nextJokeText.style.display = "inline";
+        }
         // Add the joke to the HTML element.
-        jokeElement.textContent = data.joke;
+        jokeElement.textContent = data.joke || data.value;
         // We generate the date in ISO format.
         var date = new Date().toISOString();
         // Add the joke to the reportAcudits array.
-        reportAcudits.push({ joke: data.joke, score: 0, date: date });
+        reportAcudits.push({ joke: data.joke || data.value, score: 0, date: date });
     })["catch"](function (error) { return console.error(error); });
 }
 // Update the joke score in the "reportAcudits" array.
@@ -55,7 +73,6 @@ document.getElementById("btn2").addEventListener("click", function () { return a
 document.getElementById("btn3").addEventListener("click", function () { return addScore(3); });
 // Assign event to the button to load the next joke.
 document.getElementById("btn").addEventListener("click", showJoke);
-// Exercici 4
 var apiKey = 'fc95b888f94e987b473d2bec305412b9';
 var url = "https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=".concat(apiKey, "&units=metric");
 fetch(url)
